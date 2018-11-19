@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="guess.js"></script>
+        <style>
+            div#svarBoks {
+                width: 60%; 
+            }
+            div#svarBoks h2 {
+                text-align: center;
+            }
+            .toHigh {background-color: crimson}
+            .toLow {background-color: coral}
+            .correct {background-color: chartreuse}
+            .undecided {background-color: cyan}
+        </style>
+    </head>
+    <body>
+        <h1>Gæt et tal</h1>
+        <p class="byline">
+            Spillet hvor du aldrig ved hvad computeren tænker på!
+        </p>
+        <p>
+            Nedenfor skal du skrive hvad du gætter computeren har valgt for et tal, mellem 1-10;
+        </p>
+        <div id="svarBoks" class="undecided">
+            <h2>Status</h2>
+        </div>
+        <p>
+            <input type="text" id="gætBoks" />
+        </p>
+        <p>
+            <input type="button" id="gætKnap" value="Gæt" />
+        </p>
+    </body>
+</html>
