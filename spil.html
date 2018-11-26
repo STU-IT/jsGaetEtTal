@@ -5,14 +5,35 @@
         <style>
             div#svarBoks {
                 width: 60%; 
+                margin-left: auto;
+                margin-right: auto;
             }
-            div#svarBoks h2 {
+            div#svarBoks h2, div#svarBoks p {
                 text-align: center;
             }
-            .toHigh {background-color: crimson}
+            .toHigh {
+                background-color: crimson;
+                color:whitesmoke
+            }
             .toLow {background-color: coral}
             .correct {background-color: chartreuse}
-            .undecided {background-color: cyan}
+            .undecided {
+                visibility: hidden;
+            }
+            
+            /* 
+                Alle div tags der kommer efter en div. 
+                Og det er de to afsnit som indeholder input-tags, der kommer efter svarBoks'en 
+            */
+            div ~ p {
+                text-align: center;
+            }
+
+            body {
+                margin: 1cm 2cm 1cm 2cm;
+            }
+
+
         </style>
     </head>
     <body>
@@ -25,6 +46,7 @@
         </p>
         <div id="svarBoks" class="undecided">
             <h2>Status</h2>
+            <p>i <span id="antal">Antal</span> førsøg</p>
         </div>
         <p>
             <input type="text" id="gætBoks" />
@@ -32,5 +54,6 @@
         <p>
             <input type="button" id="gætKnap" value="Gæt" />
         </p>
+
     </body>
 </html>
